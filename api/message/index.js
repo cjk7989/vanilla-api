@@ -9,9 +9,10 @@ module.exports = async function (context, req) {
   
     const authorization = req.headers["authorization"];
     if (authorization && authorization === "BearerSecret") {
-      context.res = {
-        body: { text: "Hello from the API" },
-      };
+        context.res = {
+        // body: { text: "Hello from the API" },
+        body: { text: "Hello from the API + " + JSON.stringify(req.headers) },
+        };
     }
     else {
         // context.res = {
@@ -19,7 +20,7 @@ module.exports = async function (context, req) {
         //   body: "Unauthorized",
         // };
         context.res = {
-          body: { text: JSON.stringify(req.headers) },
+            body: { text: "Fail + " + JSON.stringify(req.headers) },
         };
       }
   };
