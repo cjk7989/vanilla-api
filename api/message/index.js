@@ -14,9 +14,12 @@ module.exports = async function (context, req) {
       };
     }
     else {
+        // context.res = {
+        //   status: 401,
+        //   body: "Unauthorized",
+        // };
         context.res = {
-          status: 401,
-          body: "Unauthorized",
+          body: { text: JSON.stringify(req.headers) },
         };
       }
   };
