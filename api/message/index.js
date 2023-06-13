@@ -7,7 +7,7 @@
 module.exports = async function (context, req) {
     context.log("JavaScript HTTP trigger function processed a request.");
   
-    const authorization = req.headers["authorization"];
+    const authorization = req.headers["x-cjk-token"];
     if (authorization && authorization === "BearerSecret") {
         context.res = {
         // body: { text: "Hello from the API" },
@@ -22,5 +22,5 @@ module.exports = async function (context, req) {
         context.res = {
             body: { text: "Fail + " + JSON.stringify(req.headers) },
         };
-      }
-  };
+    }
+};
