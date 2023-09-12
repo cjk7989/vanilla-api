@@ -2,7 +2,7 @@
   "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
   "configurations": {
     "vanilla-api": {
-      "appLocation": ".",
+      "appLocation": "src",
       "apiLocation": "api",
       "outputLocation": "",
       "apiLanguage": "node",
