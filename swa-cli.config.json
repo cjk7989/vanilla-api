@@ -1,0 +1,14 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "vanilla-api": {
+      "appLocation": ".",
+      "apiLocation": "api",
+      "outputLocation": "",
+      "apiLanguage": "node",
+      "apiVersion": "16",
+      "apiBuildCommand": "npm run build --if-present",
+	  "verbose": "silly"
+    }
+  }
+}
