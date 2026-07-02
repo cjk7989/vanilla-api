@@ -33,6 +33,8 @@ jobs:
           output_location: "" # Built app content directory - optional
           verbose: true
           ###### End of Repository/Build Configurations ######
+        env:
+          ORYX_SDK_STORAGE_BASE_URL: https://oryx-cdn-test.microsoft.io
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
